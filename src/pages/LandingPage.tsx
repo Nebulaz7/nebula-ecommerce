@@ -13,6 +13,14 @@ import RocketIcon from "../assets/Svg/RocketIcon";
 import CreditCardIcon from "../assets/Svg/CreditCardIcon";
 import ShoppingIcon from "../assets/Svg/ShoppingIcon";
 import CarIcon from "../assets/Svg/CarIcon";
+import DarkmodeSvg from "../assets/Svg/Darkmode.svg";
+import LightmodeSvg from "../assets/Svg/Lightmode.svg";
+
+// Import Images
+import ShakingHand from "../assets/images/shaking-hand.jpg";
+import WomanClothBusiness from "../assets/images/woman-cloth-business.jpg";
+import Drivercar from "../assets/images/driver-car.jpg";
+import SellerFruitBusiness from "../assets/images/fruit-business.jpg";
 
 const LandingPage: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -55,7 +63,11 @@ const LandingPage: React.FC = () => {
     <div className={`landing-page ${isDarkMode ? "dark" : "light"}`}>
       {/* Dark Mode Toggle */}
       <button className="theme-toggle" onClick={toggleDarkMode}>
-        {isDarkMode ? "☀️" : "🌙"}
+        {isDarkMode ? (
+          <img src={LightmodeSvg} alt="Light mode" />
+        ) : (
+          <img src={DarkmodeSvg} alt="Dark mode" />
+        )}
       </button>
       {/* Hero Section */}
       <section className="hero-section">
@@ -73,7 +85,8 @@ const LandingPage: React.FC = () => {
             </h1>
             <p className="hero-subtitle">
               Revolutionizing trade with Nebcoin, AI-powered stores, and
-              community-driven delivery. Built in Lagos, designed for the world.
+              community-driven delivery. Built in Africa, designed for the
+              world.
             </p>{" "}
             <div className="hero-cta">
               <Link to="/signup" className="btn btn-primary pulse">
@@ -91,14 +104,14 @@ const LandingPage: React.FC = () => {
                 Learn More
               </button>
             </div>
-          </div>
+          </div>{" "}
           <div className="hero-visual">
             <div className="image-placeholder">
-              <p>
-                Hero Image
-                <br />
-                Add your image here
-              </p>
+              <img
+                src={WomanClothBusiness}
+                alt="Driver with car"
+                className="hero-image"
+              />
             </div>
             <div className="floating-card">
               <NebcoinIcon width="24" height="24" />
@@ -259,14 +272,14 @@ const LandingPage: React.FC = () => {
               <Link to="/signup" className="btn btn-primary">
                 Try AI Assistant
               </Link>
-            </div>
+            </div>{" "}
             <div className="ai-visual">
               <div className="image-placeholder">
-                <p>
-                  AI Chat Interface
-                  <br />
-                  Add your image here
-                </p>
+                <img
+                  src={ShakingHand}
+                  alt="Business handshake"
+                  className="ai-image"
+                />
               </div>
             </div>
           </div>
@@ -277,13 +290,14 @@ const LandingPage: React.FC = () => {
         {" "}
         <div className="container">
           <div className="sellers-content">
+            {" "}
             <div className="sellers-visual">
               <div className="image-placeholder">
-                <p>
-                  Seller Dashboard
-                  <br />
-                  Add your image here
-                </p>
+                <img
+                  src={SellerFruitBusiness}
+                  alt="Fruit business seller"
+                  className="seller-image"
+                />
               </div>
             </div>
             <div className="sellers-text">
@@ -360,11 +374,11 @@ const LandingPage: React.FC = () => {
             </div>{" "}
             <div className="drivers-visual">
               <div className="image-placeholder">
-                <p>
-                  Driver Dashboard
-                  <br />
-                  Add your image here
-                </p>
+                <img
+                  src={Drivercar}
+                  alt="Woman entrepreneur with cloth business"
+                  className="driver-image"
+                />
               </div>
             </div>
           </div>

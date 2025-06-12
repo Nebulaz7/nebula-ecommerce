@@ -1,0 +1,370 @@
+/* Login Page Styles */
+.login-container {
+  padding-left: 160px;
+  padding-right: 160px;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  width: 480px;
+  max-width: 480px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  max-width: 900px;
+  flex: 1;
+}
+
+.login-title {
+  color: #0d141c;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.2;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 16px;
+}
+
+.login-form {
+  margin-bottom: 12px;
+}
+
+.form-group {
+  display: flex;
+  max-width: 460px;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+  flex: 1;
+}
+
+.label-text {
+  color: #0d141c;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  padding-bottom: 6px;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.form-input {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  flex: 1;
+  resize: none;
+  overflow: hidden;
+  border-radius: 8px;
+  color: #0d141c;
+  border: 1px solid #cedae8;
+  background-color: #f8fafc;
+  height: 48px;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: normal;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: 0;
+  border-color: #cedae8;
+}
+
+.form-input::placeholder {
+  color: #49709c;
+}
+
+.password-input {
+  padding-right: 48px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  color: #49709c;
+  transition: color 0.2s ease;
+}
+
+.password-toggle:hover {
+  color: #0c77f2;
+}
+
+.error-message {
+  color: #dc2626;
+  font-size: 12px;
+  margin-top: 4px;
+  padding-left: 2px;
+}
+
+.form-input.error {
+  border-color: #dc2626;
+}
+
+.form-input.success {
+  border-color: #10b981;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.forgot-link {
+  color: #0c77f2;
+  font-size: 12px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.forgot-link:hover {
+  color: #0665cc;
+  text-decoration: underline;
+}
+
+.button-container {
+  display: flex;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.login-button {
+  display: flex;
+  min-width: 80px;
+  max-width: 460px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 36px;
+  padding-left: 12px;
+  padding-right: 12px;
+  flex: 1;
+  background-color: #0c77f2;
+  color: #f8fafc;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.015em;
+  border: none;
+}
+
+.login-button:hover {
+  background-color: #0665cc;
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+.button-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 12px 0;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.divider-text {
+  background: white;
+  color: #49709c;
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.social-button {
+  flex: 1;
+  height: 36px;
+  border: 1px solid #cedae8;
+  border-radius: 8px;
+  background: #f8fafc;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  color: #0d141c;
+}
+
+.social-button:hover {
+  border-color: #0c77f2;
+  background-color: white;
+}
+
+.google-button:hover {
+  border-color: #4285f4;
+  color: #4285f4;
+}
+
+.twitter-button:hover {
+  border-color: #1da1f2;
+  color: #1da1f2;
+}
+
+.social-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.signup-prompt {
+  color: #49709c;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: normal;
+  padding-bottom: 10px;
+  padding-top: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-align: center;
+}
+
+.signup-link {
+  color: #49709c;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: normal;
+  padding-bottom: 10px;
+  padding-top: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Loading state */
+.login-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.login-button:disabled:hover {
+  transform: none;
+  background-color: #0c77f2;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .login-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .content-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-group {
+    max-width: 100%;
+  }
+
+  .login-title {
+    font-size: 20px;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .login-title {
+    font-size: 18px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .form-group {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .button-container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .divider {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .divider::before {
+    left: 8px;
+    right: 8px;
+  }
+
+  .social-buttons {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  .signup-prompt {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}

@@ -115,7 +115,7 @@
 }
 
 .password-toggle:hover {
-  color: #0c77f2;
+  color: #16a34a;
 }
 
 .error-message {
@@ -141,7 +141,7 @@
 }
 
 .forgot-link {
-  color: #0c77f2;
+  color: #16a34a;
   font-size: 12px;
   text-decoration: none;
   font-weight: 500;
@@ -149,7 +149,7 @@
 }
 
 .forgot-link:hover {
-  color: #0665cc;
+  color: #16a34a;
   text-decoration: underline;
 }
 
@@ -174,7 +174,7 @@
   padding-left: 12px;
   padding-right: 12px;
   flex: 1;
-  background-color: #0c77f2;
+  background-color: #16a34a;
   color: #f8fafc;
   font-size: 12px;
   font-weight: bold;
@@ -184,7 +184,7 @@
 }
 
 .login-button:hover {
-  background-color: #0665cc;
+  background-color: #15803d;
 }
 
 .login-button:active {
@@ -240,7 +240,7 @@
 }
 
 .social-button:hover {
-  border-color: #0c77f2;
+  border-color: #16a34a;
   background-color: white;
 }
 
@@ -294,7 +294,7 @@
 
 .login-button:disabled:hover {
   transform: none;
-  background-color: #0c77f2;
+  background-color: #16a34a;
 }
 
 /* Mobile responsiveness */

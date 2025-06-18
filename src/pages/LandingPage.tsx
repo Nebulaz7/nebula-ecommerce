@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import "./css/LandingPageNew.css";
+import "./css/LandingPage.css";
 
 // Import SVG Icons
 import NebcoinIcon from "../assets/Svg/NebcoinIcon";
@@ -13,8 +13,6 @@ import RocketIcon from "../assets/Svg/RocketIcon";
 import CreditCardIcon from "../assets/Svg/CreditCardIcon";
 import ShoppingIcon from "../assets/Svg/ShoppingIcon";
 import CarIcon from "../assets/Svg/CarIcon";
-import DarkmodeSvg from "../assets/Svg/Darkmode.svg";
-import LightmodeSvg from "../assets/Svg/Lightmode.svg";
 
 // Import Images
 import ShakingHand from "../assets/images/shaking-hand.jpg";
@@ -23,8 +21,6 @@ import Drivercar from "../assets/images/driver-car.jpg";
 import SellerFruitBusiness from "../assets/images/fruit-business.jpg";
 
 const LandingPage: React.FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
   useEffect(() => {
     // Intersection Observer for scroll animations
     const observerOptions = {
@@ -51,24 +47,8 @@ const LandingPage: React.FC = () => {
     };
   }, []);
 
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.documentElement.setAttribute(
-      "data-theme",
-      isDarkMode ? "light" : "dark"
-    );
-  };
-
   return (
-    <div className={`landing-page ${isDarkMode ? "dark" : "light"}`}>
-      {/* Dark Mode Toggle */}
-      <button className="theme-toggle" onClick={toggleDarkMode}>
-        {isDarkMode ? (
-          <img src={LightmodeSvg} alt="Light mode" />
-        ) : (
-          <img src={DarkmodeSvg} alt="Dark mode" />
-        )}
-      </button>
+    <div>
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-background">

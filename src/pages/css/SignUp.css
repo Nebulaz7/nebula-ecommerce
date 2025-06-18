@@ -110,7 +110,7 @@
 }
 
 .password-toggle:hover {
-  color: #0c77f2;
+  color: #16a34a;
 }
 
 .error-message {
@@ -207,7 +207,7 @@
   padding-left: 12px;
   padding-right: 12px;
   flex: 1;
-  background-color: #0c77f2;
+  background-color: #16a34a;
   color: #f8fafc;
   font-size: 12px;
   font-weight: bold;
@@ -217,7 +217,7 @@
 }
 
 .register-button:hover {
-  background-color: #0665cc;
+  background-color: #15803d;
 }
 
 .button-text {

@@ -26,12 +26,22 @@
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
+.signup-columns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
 
 /* Signup Card */
 .signup-card {
   background-color: var(--bg-primary);
   padding: 25px 3rem;
   border-radius: 1rem;
+  width: 100%;
   box-shadow: var(--shadow-md);
 }
 
@@ -88,6 +98,12 @@
 
 .signup-btn:hover {
   background-color: #148a3a; /* Darker green */
+}
+
+.forgot-password {
+  text-align: left;
+  cursor: pointer;
+  color: var(--primary-color);
 }
 
 .login-link {

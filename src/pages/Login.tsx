@@ -1,22 +1,21 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./css/SignUp.css";
+import "./css/Login.css";
 import SellerFruitBusiness from "../assets/images/fruit-business.jpg";
 
-const SignUp: React.FC = () => {
-  const [name, setName] = useState("");
+const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission logic here
-    console.log({ name, email, password });
+    console.log({ email, password });
   };
 
   const handleGoogleSignIn = () => {
-    // Handle Google sign-up logic here
-    console.log("Google sign-up clicked");
+    // Handle Google sign-in logic here
+    console.log("Google sign-in clicked");
   };
 
   const handleFacebookSigin = () => {
@@ -32,21 +31,10 @@ const SignUp: React.FC = () => {
       <div className="signup-overlay"></div>
       <div className="signup-columns">
         <div className="signup-card">
-          <h2>Sign Up</h2>
+          <h2>Log In</h2>
           <form onSubmit={handleSubmit}>
             <div className="input-group">
-              <label htmlFor="name">Full Name</label>
-              <input
-                type="text"
-                id="name"
-                placeholder="John Doe"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-            </div>
-            <div className="input-group">
-              <label htmlFor="email">Email Address</label>
+              <label htmlFor="email">Email</label>
               <input
                 type="email"
                 id="email"
@@ -57,7 +45,10 @@ const SignUp: React.FC = () => {
               />
             </div>
             <div className="input-group">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">
+                Password{" "}
+                <span className="forgot-password">Forgot Password?</span>
+              </label>
               <input
                 type="password"
                 placeholder="*****"
@@ -68,7 +59,7 @@ const SignUp: React.FC = () => {
               />
             </div>
             <button type="submit" className="signup-btn">
-              Sign Up
+              Log In
             </button>
           </form>
           <p>or</p>
@@ -96,7 +87,7 @@ const SignUp: React.FC = () => {
                     d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"
                   />
                 </svg>{" "}
-                Sign Up with Google
+                Log In with Google
               </button>
             </p>
             <p>
@@ -119,12 +110,12 @@ const SignUp: React.FC = () => {
                     d="M16.671 15.543l.532-3.47h-3.328v-2.25c0-.949.465-1.874 1.956-1.874h1.513V4.996s-1.374-.235-2.686-.235c-2.741 0-4.533 1.662-4.533 4.669v2.632H7.078v3.47h3.047v8.385a12.118 12.118 0 003.75 0v-8.385h2.796z"
                   />
                 </svg>
-                Sign Up with Facebook
+                Log In with Facebook
               </button>
             </p>
           </div>
           <p className="login-link">
-            Already have an account? <Link to="/login"> Log In</Link>
+            Don't have an account? <Link to="/signup">Sign Up</Link>
           </p>
         </div>
       </div>
@@ -132,6 +123,4 @@ const SignUp: React.FC = () => {
   );
 };
 
-// help me align the sign up card to the center in the login.tsx
-
-export default SignUp;
+export default Login;

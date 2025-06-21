@@ -159,6 +159,7 @@
   text-align: center;
   margin-top: 1.5rem;
   color: var(--text-secondary);
+  gap: 5px;
 }
 
 .login-link a {
@@ -168,7 +169,100 @@
 }
 
 .login-link a:hover {
-  text-decoration: underline;
+  text-decoration: none;
+}
+.signup-card > p {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: var(--text-secondary);
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.signup-card > p::before,
+.signup-card > p::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.signup-card > p::before {
+  margin-right: 0.5em;
+}
+
+.signup-card > p::after {
+  margin-left: 0.5em;
+}
+
+/* Social Signup Section */
+.social-signup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-signup p {
+  margin: 0; /* Resets default paragraph margins */
+}
+
+/* Base styles for social buttons */
+.google-signup-btn,
+.facebook-signup-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+/* Icon styling */
+.social-signup i {
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+/* Google Button */
+.google-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.google-signup-btn:hover {
+  background-color: var(--text-secondary); /* Google's Blue */
+  border-color: #4285f4;
+  color: #fff;
+}
+
+.google-signup-btn:hover .fa-google {
+  color: #fff;
+}
+
+/* Facebook Button */
+.facebook-signup-btn .facebook-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.facebook-signup-btn:hover {
+  background-color: var(--text-secondary);
+  border-color: #1877f2;
+  color: #fff;
+}
+
+.facebook-signup-btn:hover .facebook-icon {
+  color: #fff;
 }
 
 /* Responsive Design */

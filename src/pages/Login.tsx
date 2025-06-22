@@ -58,6 +58,12 @@ const Login: React.FC = () => {
                 required
               />
             </div>
+            <div className="remember-me">
+              <label htmlFor="remember-me">
+                <input type="checkbox" id="remember-me" name="remember-me" />
+                Remember Me
+              </label>
+            </div>
             <button type="submit" className="signup-btn">
               Log In
             </button>

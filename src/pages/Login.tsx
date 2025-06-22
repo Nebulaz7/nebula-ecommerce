@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./css/Login.css";
-import SellerFruitBusiness from "../assets/images/fruit-business.jpg";
+import silkBg from "../assets/images/silk-background.png";
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -26,7 +26,7 @@ const Login: React.FC = () => {
   return (
     <div
       className="signup-container"
-      style={{ backgroundImage: `url(${SellerFruitBusiness})` }}
+      style={{ backgroundImage: `url(${silkBg})` }}
     >
       <div className="signup-overlay"></div>
       <div className="signup-columns">

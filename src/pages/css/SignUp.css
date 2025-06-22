@@ -30,9 +30,9 @@
 .signup-columns {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  max-width: 1200px;
-  width: 80%;
+  gap: 5rem;
+  max-width: 1400px;
+  width: 90%;
   position: relative;
   z-index: 2;
   align-items: center;
@@ -95,9 +95,11 @@
 /* Signup Card */
 .signup-card {
   background-color: var(--bg-primary);
-  padding: 25px 3rem;
+  padding: 3rem 4rem;
+  width: 100%;
   border-radius: 1rem;
   box-shadow: var(--shadow-md);
+  min-width: 450px;
 }
 
 .signup-card h2 {
@@ -266,28 +268,74 @@
 }
 
 /* Responsive Design */
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .signup-columns {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    width: 95%;
+    gap: 4rem;
   }
 
-  .signup-about {
-    text-align: center;
-  }
-
-  .signup-about p {
-    margin-left: auto;
-    margin-right: auto;
+  .signup-card {
+    min-width: 400px;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+  .signup-container {
+    padding: 1rem;
+  }
+
+  .signup-columns {
+    gap: 2rem;
+    width: 100%;
+  }
+
   .signup-card {
-    padding: 2rem;
+    padding: 2rem 2rem;
+    max-width: 500px;
+  }
+
+  .signup-about {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-columns {
+    gap: 1rem;
+  }
+
+  .signup-card {
+    padding: 1rem;
+  }
+
+  .signup-card h2 {
+    font-size: 1.5rem;
   }
 
   .signup-about h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  .signup-about {
+    display: none; /* Hide about section on very small screens to save space */
+  }
+}
+
+@media (max-width: 360px) {
+  .signup-card {
+    margin: 0;
+    border-radius: 0.5rem;
+  }
+
+  .google-signup-btn,
+  .facebook-signup-btn {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+
+  .google-icon,
+  .facebook-signup-btn svg {
+    width: 20px;
+    height: 20px;
   }
 }

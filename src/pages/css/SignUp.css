@@ -41,6 +41,8 @@
 /* About Section */
 .signup-about {
   color: white;
+  width: 100%;
+  min-width: 450px;
 }
 
 .signup-about h1 {

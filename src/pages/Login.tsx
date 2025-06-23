@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./css/Login.css";
 import silkBg from "../assets/images/silk-background.png";
+import supabase from "../config/SupabaseClientConfig";
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState("");
@@ -13,13 +14,29 @@ const Login: React.FC = () => {
     console.log({ email, password });
   };
 
-  const handleGoogleSignIn = () => {
-    // Handle Google sign-in logic here
-    console.log("Google sign-in clicked");
+  const handleGoogleSignIn = async () => {
+    try {
+      const { data, error } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: {
+          redirectTo: `${window.location.origin}/auth/callback`,
+        },
+      });
+
+      if (error) {
+        console.error("Google sign-in error:", error);
+        return;
+      }
+
+      // The redirect to dashboard with user ID will be handled by AuthCallback component
+      console.log("Google sign-in initiated:", data);
+    } catch (error) {
+      console.error("Unexpected error during Google sign-in:", error);
+    }
   };
 
   const handleXSigin = () => {
-    // Handle Facebook sign-in logic here
+    // Handle X sign-in logic here
     console.log("X sign-in clicked");
   };
 

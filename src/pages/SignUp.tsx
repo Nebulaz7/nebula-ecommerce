@@ -14,20 +14,24 @@ const SignUp: React.FC = () => {
     // Handle form submission logic here
     console.log({ name, email, password });
   };
-
   const handleGoogleSignIn = async () => {
-    const { error, data } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: {
-        redirectTo: `${window.location.origin}/signup`,
-      },
-    });
+    try {
+      const { data, error } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: {
+          redirectTo: `${window.location.origin}/auth/callback`,
+        },
+      });
 
-    if (error) {
-      console.log(error);
-    }
-    if (data) {
-      console.log(data);
+      if (error) {
+        console.error("Google sign-in error:", error);
+        return;
+      }
+
+      // The redirect to dashboard with user ID will be handled by AuthCallback component
+      console.log("Google sign-in initiated:", data);
+    } catch (error) {
+      console.error("Unexpected error during Google sign-in:", error);
     }
   };
 

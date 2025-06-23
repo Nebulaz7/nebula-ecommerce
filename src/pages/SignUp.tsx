@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./css/SignUp.css";
 import silkBg from "../assets/images/silk-background.png";
+import supabase from "../config/SupabaseClientConfig";
 
 const SignUp: React.FC = () => {
   const [name, setName] = useState("");
@@ -14,7 +15,7 @@ const SignUp: React.FC = () => {
     console.log({ name, email, password });
   };
 
-  const handleGoogleSignIn = () => {
+  const handleGoogleSignIn = async () => {
     // Handle Google sign-up logic here
     console.log("Google sign-up clicked");
   };

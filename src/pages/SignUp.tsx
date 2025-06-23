@@ -18,6 +18,7 @@ const SignUp: React.FC = () => {
   const handleGoogleSignIn = async () => {
     // Handle Google sign-up logic here
     console.log("Google sign-up clicked");
+    console.log(supabase);
   };
 
   const handleFacebookSigin = () => {

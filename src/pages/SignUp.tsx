@@ -5,14 +5,29 @@ import silkBg from "../assets/images/silk-background.png";
 import supabase from "../config/SupabaseClientConfig";
 
 const SignUp: React.FC = () => {
-  const [name, setName] = useState("");
+  const [firstname, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const userData = {
+      firstname,
+      lastName,
+      email,
+      password,
+    };
+
+    // clear form fields
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setPassword("");
+
     // Handle form submission logic here
-    console.log({ name, email, password });
+    console.log(userData);
   };
   const handleGoogleSignIn = async () => {
     try {
@@ -66,13 +81,24 @@ const SignUp: React.FC = () => {
           <h2>Sign Up</h2>
           <form onSubmit={handleSubmit}>
             <div className="input-group">
-              <label htmlFor="name">Full Name</label>
+              <label htmlFor="name">First Name</label>
               <input
                 type="text"
                 id="name"
-                placeholder="John Doe"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                placeholder="John"
+                value={firstname}
+                onChange={(e) => setFirstName(e.target.value)}
+                required
+              />
+            </div>
+            <div className="input-group">
+              <label htmlFor="name">Last Name</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Doe"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
                 required
               />
             </div>

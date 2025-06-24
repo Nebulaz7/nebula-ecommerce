@@ -26,12 +26,6 @@
   text-decoration: none;
 }
 
-.logo-icon {
-  width: 1rem;
-  height: 1rem;
-  color: #16a34a;
-}
-
 .navbar-content {
   display: flex;
   align-items: center;

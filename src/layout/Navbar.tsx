@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 
 interface NavbarButtonProps {
-  text: string;
+  text?: string;
   onNavigate?: string;
 }
 
@@ -21,15 +21,38 @@ function Navbar({ text, onNavigate }: NavbarButtonProps) {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          <div className="logo-icon">
-            <svg viewBox="0 0 48 48" fill="none">
-              <path
-                d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z"
-                fill="currentColor"
+          <svg
+            width="200"
+            height="60"
+            viewBox="0 0 200 60"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g>
+              <rect
+                x="10"
+                y="15"
+                width="30"
+                height="20"
+                rx="4"
+                fill="#16a34a"
               />
-            </svg>
-          </div>
-          Nebula
+              <polygon points="10,15 10,35 25,35 10,15" fill="white" />
+              <circle cx="15" cy="40" r="5" fill="#1E2A38" />
+              <circle cx="35" cy="40" r="5" fill="#1E2A38" />
+            </g>
+
+            <text
+              x="50"
+              y="35"
+              font-family="Segoe UI, sans-serif"
+              font-size="24"
+              fill="#1E2A38"
+              font-weight="bold"
+            >
+              N-Buy
+            </text>
+          </svg>
         </Link>{" "}
         <div className="navbar-content">
           <ul className="navbar-menu">

@@ -11,7 +11,13 @@ interface UserNavProps {
   };
 }
 
-const UserNav: React.FC<UserNavProps> = ({ user }) => {
+const UserNav: React.FC<UserNavProps> = ({
+  user = {
+    name: "Joshua Peters",
+    email: "jospet@gmail.com",
+    avatar: null,
+  },
+}) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();

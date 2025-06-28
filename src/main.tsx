@@ -7,7 +7,7 @@ import SignUp from "./pages/SignUp.tsx";
 import Login from "./pages/Login.tsx";
 import Dashboard from "./pages/Dashboard.tsx";
 import AuthCallback from "./Components/AuthCallback.tsx";
-import UserWallet from "./user/userWallet.tsx";
+import UserWallet from "./user/UserWallet.tsx";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },

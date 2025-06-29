@@ -269,6 +269,7 @@
   height: 100vh;
   z-index: 2000;
   transition: right 0.3s ease;
+  display: none;
 }
 
 .mobile-slide-menu.open {
@@ -472,6 +473,16 @@
     padding: 14px 16px;
     font-size: 15px;
   }
+  .mobile-menu-content {
+    width: 50%;
+  }
+
+  .mobile-menu-overlay {
+    width: 100%;
+  }
+  .mobile-slide-menu {
+    display: block;
+  }
 }
 
 @media (max-width: 480px) {
@@ -525,5 +536,11 @@
 
   .mobile-menu-overlay {
     width: 100%;
+  }
+  .mobile-slide-menu {
+    display: block;
+  }
+  .user-nav {
+    padding: 15px 20px;
   }
 }
